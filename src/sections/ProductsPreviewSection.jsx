@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const ProductsPreviewSection = () => {
   const featuredProducts = [
-    { name: 'LED Bulbs', image: 'https://placehold.co/200x200/eee/333?text=LED' },
-    { name: 'MCB & Distribution Boards', image: 'https://placehold.co/200x200/eee/333?text=MCB' },
-    { name: 'Wiring Cables', image: 'https://placehold.co/200x200/eee/333?text=Cable' },
-    { name: 'Ceiling Fans', image: 'https://placehold.co/200x200/eee/333?text=Fan' },
+    { name: 'Trimmers Salon Quality', image: 'https://vgrofficial.in/cdn/shop/collections/TRIMMER_1.jpg?crop=center&height=1200&v=1707392538&width=1200' },
+    { name: 'Air Fryers', image: 'https://assets.aboutamazon.com/dims4/default/5894032/2147483647/strip/false/crop/1600x900+0+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Fd0%2Ffb%2F57df9cc5463d8d12cb810c57ea4e%2F0-top-pic.jpg' },
+    { name: 'Clocks', image: 'https://images.pexels.com/photos/552598/pexels-photo-552598.jpeg' },
+    { name: 'Fans', image: 'https://buyabans.com/cdn-cgi/imagedelivery/OgVIyabXh1YHxwM0lBwqgA/product/8202/1202_1_1_1.jpg/public' },
   ];
 
   return (

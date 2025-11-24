@@ -12,28 +12,25 @@ const AboutSection = () => {
 
         {/* Owner & Intro */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-16">
-          {/* Images Grid - 4 images (2x2) */}
+          {/* Images Grid - 4 images (2x2) with hover */}
           <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://placehold.co/300x300/ddd/333?text=Shop+Front"
-              alt="Rich More Shop - Pettah"
-              className="rounded-lg shadow-md object-cover w-full h-48"
-            />
-            <img
-              src="https://placehold.co/300x300/ddd/333?text=Owner"
-              alt="Junaid Fareen - Owner"
-              className="rounded-lg shadow-md object-cover w-full h-48"
-            />
-            <img
-              src="https://placehold.co/300x300/ddd/333?text=Products"
-              alt="Electrical & Home Items"
-              className="rounded-lg shadow-md object-cover w-full h-48"
-            />
-            <img
-              src="https://placehold.co/300x300/ddd/333?text=Warehouse"
-              alt="Stock Warehouse"
-              className="rounded-lg shadow-md object-cover w-full h-48"
-            />
+            {[
+              { src: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSyZH1t_VW2Id5zc0AYeyWcUx0OBMq6-00uNg8-mUsZ3BONd4Yl-Fmkgu6RQ1VDXXCx7YZGu93s7Dlt76aPmZuB3Z-fTWxTROpCNxv4U3EL0SZ87-XV7QyvefL3Q88yYw31mFNyqzAF4ct-W=s680-w680-h510", alt: "Rich More Shop - Pettah" },
+              { src: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxlISrWqWoLmJJalzilPgohcFc6fSpk74hiqB8UVwHmbod-pAf-dsfaO55vyTutUuWVxpU0awuPkMBDbrUwDQRcuRBaCFEBqodeQXAWqgh8xWHwZQHCRzt_SZ1wJrO1Qhkw-FhXit6vYuz_=s680-w680-h510", alt: "Junaid Fareen - Owner" },
+              { src: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSy1hg_nbKSfKfcJDywzWBQXqTMHYLL_J_q_Voh-x9b8yYxh0w3_qzmHMeuIriXrHe-FfMrfS7cWzFk1whkc1qWInHDmePmio-ye1ZIvNeYIH1wTWhYQxKXXHZMBq4CaLTqqvHeWBGJf-psk=s680-w680-h510", alt: "Electrical & Home Items" },
+              { src: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwEAk9LSfanxyAYsjni9_e0zBetwbcEoNPPiXuxFTAiqZm5EX40vQ2FkXWVbaJlwYfW9hhiz02xBfT6J3ms3vp3YYZumsF707524xzdDE6TP4_s0boy8fRmpskpLdjLvxWm2yx1rBbkwxSK=s680-w680-h510", alt: "Stock Warehouse" },
+            ].map((img, idx) => (
+              <div
+                key={idx}
+                className="overflow-hidden rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+            ))}
           </div>
 
           {/* Text Content */}
@@ -48,7 +45,7 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* What We Offer */}
+        {/* What We Offer - with hover cards */}
         <div className="mb-16">
           <h3 className="text-2xl font-semibold text-gray-800 text-center mb-8">What We Offer</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -58,7 +55,13 @@ const AboutSection = () => {
               { icon: <FaWarehouse className="text-blue-600 text-xl" />, title: 'Kitchen & Home Appliances' },
               { icon: <FaGlobeAsia className="text-blue-600 text-xl" />, title: 'Direct Imports – Global Quality' },
             ].map((item, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-lg border border-gray-100 text-center
+                  transition-all duration-300
+                  hover:shadow-lg hover:border-blue-200 hover:-translate-y-1
+                  cursor-pointer"
+              >
                 <div className="flex justify-center mb-3">{item.icon}</div>
                 <h4 className="font-medium text-gray-800">{item.title}</h4>
               </div>
@@ -66,28 +69,37 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Product List Details */}
+        {/* Product List Details - with hover on list items */}
         <div className="bg-white rounded-xl shadow-md p-6 mb-12 border border-gray-200">
           <h3 className="text-xl font-semibold text-gray-800 mb-3">Our Product Range Includes:</h3>
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-gray-600 list-disc list-inside">
-            <li>Wall Clocks & Wrist Watches</li>
-            <li>LED Bulbs, Tubelights & Lighting Fixtures</li>
-            <li>Wiring Cables, Switches & Sockets</li>
-            <li>MCBs, DB Boards & Circuit Protection</li>
-            <li>Rice Cookers, Ovens, Blenders</li>
-            <li>Ceiling Fans, Exhaust Fans, Stand Fans</li>
-            <li>Electric Kettles, Irons, Heaters</li>
-            <li>Industrial Electrical Equipment</li>
-            <li>Imported Home & Kitchen Appliances</li>
+            {[
+              "Wall Clocks & Wrist Watches",
+              "LED Bulbs, Tubelights & Lighting Fixtures",
+              "Wiring Cables, Switches & Sockets",
+              "MCBs, DB Boards & Circuit Protection",
+              "Rice Cookers, Ovens, Blenders",
+              "Ceiling Fans, Exhaust Fans, Stand Fans",
+              "Electric Kettles, Irons, Heaters",
+              "Industrial Electrical Equipment",
+              "Imported Home & Kitchen Appliances"
+            ].map((item, idx) => (
+              <li
+                key={idx}
+                className="transition-colors duration-200 hover:text-blue-700 hover:font-medium"
+              >
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Closing Promise */}
-        <div className="text-center bg-blue-50 rounded-xl py-8 px-6">
+        <div className="text-center bg-blue-50 rounded-xl py-8 px-6 border border-blue-100">
           <h3 className="text-2xl font-bold text-gray-800 mb-3">Unlimited Stock · Best Prices · Trusted Service</h3>
           <p className="text-gray-700 max-w-3xl mx-auto">
             Whether you're a contractor, retailer, or individual customer — we serve everyone with the same dedication.  
-            With **direct imports** and **10,000+ items in stock**, Rich More ensures you get **quality, variety, and value** in every purchase.
+            With <strong>direct imports</strong> and <strong>10,000+ items in stock</strong>, Rich More ensures you get <strong>quality, variety, and value</strong> in every purchase.
           </p>
         </div>
       </div>
