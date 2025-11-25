@@ -10,21 +10,24 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Left: Logo + Shop Info */}
           <div className="flex flex-col">
+            <Link to="/" className="flex items-center">
             <div className="flex items-center">
-              {/* Replace with actual logo later */}
-              <div className="w-10 h-10 bg-blue-700 rounded-md mr-3 flex items-center justify-center text-white font-bold text-lg">
-                RM
-              </div>
+              {/* Replaced placeholder with actual logo image */}
+              <img
+                src="/logo.png"
+                alt="Rich More Logo"
+                className="w-14 h-14 mr-3 object-contain" // adjust w/h as needed
+              />
               <span className="text-xl font-bold text-gray-800">Rich More</span>
             </div>
-            <p className="text-xs text-gray-500 ml-13 -mt-1">Wholesale & Retail Dealer</p>
+            </Link>
+            <p className="text-xs text-gray-500 ml-17 -mt-4">Wholesale & Retail Dealer</p>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
             <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium transition">Home</Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 font-medium transition">About Us</Link>
-            <Link to="/products" className="text-gray-700 hover:text-blue-600 font-medium transition">Products</Link>
+<a href="#about" className="text-gray-700 hover:text-blue-600 font-medium transition">About Us</a>            <Link to="/products" className="text-gray-700 hover:text-blue-600 font-medium transition">Products</Link>
             <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition">Contact Us</Link>
           </div>
 

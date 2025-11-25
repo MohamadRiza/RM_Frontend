@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Remove focus outline for cleaner look (keep for accessibility if needed) */
+a:focus {
+  outline: none;
+}

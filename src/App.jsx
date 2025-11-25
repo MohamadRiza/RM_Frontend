@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Footer from './components/Footer';
 
 // Pages (create these as empty files for now)
 
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<Home />} />
           </Routes>
         </main>
+        <Footer/>
       </div>
     </Router>
   );
