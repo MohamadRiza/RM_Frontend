@@ -62,9 +62,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="#home" className="hover:text-white transition-colors duration-200">Home</a></li>
-              <li><a href="#about" className="hover:text-white transition-colors duration-200">About Us</a></li>
-              <li><a href="#products" className="hover:text-white transition-colors duration-200">Products</a></li>
+              <li><a href="/" className="hover:text-white transition-colors duration-200">Home</a></li>
+              <li><a href="/#about" className="hover:text-white transition-colors duration-200">About Us</a></li>
+              <li><a href="/products" className="hover:text-white transition-colors duration-200">Products</a></li>
               <li><a href="#contact" className="hover:text-white transition-colors duration-200">Contact</a></li>
               <li><a href="#careers" className="hover:text-white transition-colors duration-200">Careers</a></li>
             </ul>
@@ -109,7 +109,7 @@ const Footer = () => {
           <div className="mt-2">
             Developed by{' '}
             <a
-              href="https://nexa-soft.com" // 🔗 Replace with real Nexasoft URL
+              href="https://www.nexasoft.site/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-white underline hover:no-underline transition"
