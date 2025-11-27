@@ -6,7 +6,7 @@ const HeroSection = () => {
       className="relative py-24 md:py-32 bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: "url('https://images.pexels.com/photos/33415138/pexels-photo-33415138.jpeg')", // ← Place your image in public/images/
-        minHeight: '500px',
+        minHeight: '550px',
       }}
     >
       {/* Dark overlay for better text contrast */}
