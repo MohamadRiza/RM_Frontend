@@ -2,16 +2,65 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Placeholder products — will be replaced by API data later
-const placeholderProducts = [
-  { id: 1, name: 'LED Bulbs', category: 'Lighting', image: 'https://placehold.co/300x300/eee/333?text=LED+Bulb' },
-  { id: 2, name: 'Ceiling Fans', category: 'Home Appliances', image: 'https://placehold.co/300x300/eee/333?text=Fan' },
-  { id: 3, name: 'Wall Clocks', category: 'Decor', image: 'https://placehold.co/300x300/eee/333?text=Clock' },
-  { id: 4, name: 'Rice Cookers', category: 'Kitchen', image: 'https://placehold.co/300x300/eee/333?text=Rice+Cooker' },
-  { id: 5, name: 'MCB Distribution Board', category: 'Electrical', image: 'https://placehold.co/300x300/eee/333?text=MCB' },
-  { id: 6, name: 'Wiring Cables', category: 'Electrical', image: 'https://placehold.co/300x300/eee/333?text=Cable' },
-  { id: 7, name: 'Oven Toaster Grill', category: 'Kitchen', image: 'https://placehold.co/300x300/eee/333?text=Oven' },
-  { id: 8, name: 'Digital Watches', category: 'Accessories', image: 'https://placehold.co/300x300/eee/333?text=Watch' },
+// Full product list from your shop — grouped by category
+const allProducts = [
+  // 🕰️ TIME & DECOR
+  { id: 1, name: 'Wall Clock', category: 'Time & Decor', image: 'https://images.pexels.com/photos/21294/pexels-photo.jpg' },
+  { id: 2, name: 'Ladies / Gents / Watches', category: 'Time & Decor', image: 'https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg' },
+
+  // 💡 LIGHTING & BASIC ELECTRICAL
+  { id: 3, name: 'Torch', category: 'Lighting', image: 'https://images.pexels.com/photos/733087/pexels-photo-733087.jpeg' },
+  { id: 4, name: 'Wire Code', category: 'Electrical', image: 'https://i0.wp.com/elecshop.lk/wp-content/uploads/2021/08/1-19-1.png?resize=300%2C300&ssl=1' },
+  { id: 5, name: 'Mosquito Bat', category: 'Electrical', image: 'https://onlineworld.lk/wp-content/uploads/2025/10/4-1.jpg' },
+
+  // 🌀 FANS (All types together)
+  { id: 6, name: 'Ceiling Fan', category: 'Fans', image: 'https://www.kdk.com.my/wp-content/uploads/2020/07/RegulatorType-K12VO.jpg' },
+  { id: 7, name: 'Table Fan', category: 'Fans', image: 'https://supersavings.lk/wp-content/uploads/2025/02/kawashi-tf21.jpg' },
+  { id: 8, name: 'Stand Fan', category: 'Fans', image: 'https://i0.wp.com/elecshop.lk/wp-content/uploads/2021/08/14-3-2.png?fit=600%2C609&ssl=1' },
+  { id: 9, name: 'Wall Fan', category: 'Fans', image: 'https://galaxyappliances.pk/wp-content/uploads/2024/10/Bracket-Fan.webp' },
+
+  // 🔥 COOKING HEAT SOURCES
+  { id: 10, name: 'Gas Cooker – 1 Burner', category: 'Cooking', image: 'https://laksela.lk/wp-content/uploads/2020/12/9568-1.jpg' },
+  { id: 11, name: 'Gas Cooker – 2 Burner', category: 'Cooking', image: 'https://img.drz.lazcdn.com/static/lk/p/3233aea0912865847e96d43a0bb9a470.jpg_720x720q80.jpg' },
+  { id: 12, name: 'Gas Cooker – 3 Burner', category: 'Cooking', image: 'https://royalmart.lk/assets/products/12-2024/954f95403c6cd9e7629bcdadb5da64db.jpeg' },
+  { id: 13, name: 'Wick Stove', category: 'Cooking', image: 'https://5.imimg.com/data5/ANDROID/Default/2025/11/560887359/LK/MV/HZ/1101769/product-jpeg-500x500.jpg' },
+  { id: 14, name: 'Hot Plate', category: 'Cooking', image: 'https://image.made-in-china.com/2f0j00gcpbLeosZEqZ/Single-Burner-1000W-Electric-Hot-Plate-Fast-Cooking-Multi-Functions-Portable-Electric-Cooker.webp' },
+
+  // 🍚 RICE & WATER
+  { id: 15, name: 'Rice Cooker', category: 'Kitchen', image: 'https://lh3.googleusercontent.com/proxy/OLwg4ULpPujabL-pN9EcCYubxCYFv89IkWKhjs7q269niSeXPFGkeMtDQqr-WELlfNSfPtl4GgCoazuBQ2Bjur8LzS7WQS9-owU' },
+  { id: 16, name: 'Electric Kettle', category: 'Kitchen', image: 'https://img.drz.lazcdn.com/static/lk/p/770d62d9e69c5db672091577f1cd474b.jpg_720x720q80.jpg' },
+  { id: 17, name: 'Whistle Kettle', category: 'Kitchen', image: 'https://static-01.daraz.lk/p/fc23952bc4ae5049967f6e5182442e3c.jpg' },
+  { id: 18, name: 'Flask', category: 'Kitchen', image: 'https://static-01.daraz.lk/p/8700fbb463ecdc67e9d5b094a478e277.jpg' },
+  { id: 19, name: 'Mug / Tea Glass', category: 'Kitchen', image: 'https://www.rubberstamps.lk/wp-content/uploads/2019/06/sublimation-black-magic-mug_matte-500x500-1.jpg' },
+
+  // 🍳 KITCHEN APPLIANCES (Baking & Prep)
+  { id: 20, name: 'Oven / Microwave', category: 'Kitchen', image: 'https://static-01.daraz.lk/p/mdc/2a818636ff3002285f0852cd64db5fe1.jpg' },
+  { id: 21, name: 'Air Fryer', category: 'Kitchen', image: 'https://media3.bosch-home.com/Images/600x/26145042_BO-AirFryer_Serie6_MAF6_Stage_1200x676.jpg' },
+  { id: 22, name: 'Waffle Maker', category: 'Kitchen', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCtPDsqSC9Mm5wZxrQsev-FzqJ_IObpqC1dQ&s' },
+  { id: 23, name: 'Sandwich Maker', category: 'Kitchen', image: 'https://rukminim2.flixcart.com/image/480/640/xif0q/sandwich-maker/s/7/y/elato-bs203-4-slice-sandwich-maker-wipro-original-imagyh4z5hfffrzk.jpeg?q=90' },
+  { id: 24, name: 'Grill Maker', category: 'Kitchen', image: 'https://longwayindia.com/cdn/shop/files/1_412ff4b8-164a-4c1e-9aea-62e0f61b622d.jpg?v=1756816383' },
+  { id: 25, name: 'Donut Maker', category: 'Kitchen', image: 'https://images.thdstatic.com/productImages/dc28d522-f81b-4e7b-b237-3895695f3159/svn/white-chef-buddy-specialty-dessert-makers-hw031059-64_1000.jpg' },
+
+  // 🔪 KITCHEN TOOLS
+  { id: 26, name: 'Blender / Mixer', category: 'Kitchen Tools', image: 'https://supersavings.lk/wp-content/uploads/2025/11/bright-blender-br-495.jpg' },
+  { id: 27, name: 'Vegetable Chopper', category: 'Kitchen Tools', image: 'https://m.media-amazon.com/images/I/717SCiqXlCL._AC_SL1500_.jpg' },
+  { id: 28, name: 'Egg Beater / Hand Mixer', category: 'Kitchen Tools', image: 'https://www.raf-china.com/wp-content/uploads/2024/12/%EF%BC%96-768x768.jpg' },
+  { id: 29, name: 'Polythene Sealer', category: 'Kitchen Tools', image: 'https://img.drz.lazcdn.com/g/kf/Sf155955f34b84e96b782e469d35a94cfc.jpg_720x720q80.jpg' },
+  { id: 30, name: 'Kitchen Scale', category: 'Kitchen Tools', image: 'https://shoppingkingdom.lk/wp-content/uploads/2020/04/Kitchen-scale.jpeg' },
+
+  // 👕 PERSONAL CARE
+  { id: 31, name: 'Hair Dryer', category: 'Personal Care', image: 'https://img.drz.lazcdn.com/static/lk/p/f58886c92d3d97a111cff665a0213596.jpg_960x960q80.jpg_.webp' },
+  { id: 32, name: 'Hair Iron', category: 'Personal Care', image: 'https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/5590010/2025/1/22/62c446b0-fb66-4b53-9f6d-2931835085941737535090347-Ikonic-Professional-Gleam-Hair-Straightener-30---Black--Rose-1.jpg' },
+  { id: 33, name: 'Trimmer – Charge / Plug', category: 'Personal Care', image: 'https://vgrofficial.in/cdn/shop/collections/TRIMMER_1.jpg?v=1707392538&width=2048' },
+  { id: 34, name: 'Iron – Dry / Heavy', category: 'Home Care', image: 'https://tpmart.lk/wp-content/uploads/2024/02/Misaki-Iron-Heavy-1000W6.jpg' },
+  { id: 35, name: 'Massagers', category: 'Personal Care', image: 'https://static-01.daraz.lk/p/a426e391ea61475d8d1f7aa243e3de0d.jpg' },
+  { id: 36, name: 'Personal Scale', category: 'Health', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNyFoxD2n1zacOdb_fOQSoEAww3VSr4L8sGA&s' },
+
+  // 📻 ELECTRONICS & ENTERTAINMENT
+  { id: 37, name: 'Calculator', category: 'Electronics', image: 'https://gadgetasia.lk/wp-content/uploads/2024/07/ct-500-citizen-calculator-gadget-asia-lk-best-price-sri-lanka.jpg.webp' },
+  { id: 38, name: 'Radio – Mini & Big', category: 'Electronics', image: 'https://img.drz.lazcdn.com/g/kf/S33b096320d044b3d9b1ca98e71e7bc4ch.jpg_720x720q80.jpg' },
+  { id: 39, name: 'Speakers / Subwoofer', category: 'Electronics', image: 'https://images.philips.com/is/image/philipsconsumer/df545073a8474e55bb16b0c40120ff1c?wid=700&hei=700&$pnglarge$' },
+  { id: 40, name: 'Mini Speakers', category: 'Electronics', image: 'https://cdn.gqmobiles.lk/wp-content/uploads/2025/11/gq-mobiles-jbl-partybox-on-the-go-2-with-mic.png' },
 ];
 
 const ProductsGallery = () => {
@@ -22,13 +71,13 @@ const ProductsGallery = () => {
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800">Our Products</h1>
           <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
-            Explore our wide range of electrical items, home appliances, and more — all available for wholesale and retail.
+            Rich More offers 10,000+ electrical & home appliance items — from kitchen gadgets to industrial tools — all available for wholesale and retail in Pettah, Colombo.
           </p>
         </div>
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {placeholderProducts.map((product) => (
+          {allProducts.map((product) => (
             <div
               key={product.id}
               className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden
@@ -39,13 +88,16 @@ const ProductsGallery = () => {
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  loading="lazy"
                 />
               </div>
               <div className="p-5">
                 <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
                   {product.category}
                 </span>
-                <h3 className="font-semibold text-gray-800 mt-2">{product.name}</h3>
+                <h3 className="font-semibold text-gray-800 mt-2 text-sm leading-tight">
+                  {product.name}
+                </h3>
                 <div className="mt-4">
                   <Link
                     to="/contact"
