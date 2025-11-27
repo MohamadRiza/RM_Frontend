@@ -2,10 +2,46 @@
 import { FaClock, FaLightbulb, FaWarehouse, FaGlobeAsia } from 'react-icons/fa';
 
 const AboutSection = () => {
+  const productItems = [
+    "Wall Clocks & Wrist Watches",
+    "Torch / Night Lights",
+    "Ceiling, Wall, Stand & Table Fans",
+    "Gas Cooker (1, 2, or 3 Burner)",
+    "Oven / Microwave",
+    "Rice Cooker",
+    "Hair Dryer",
+    "Hair Iron",
+    "Calculator",
+    "Radio (Mini & Big)",
+    "Speakers / Subwoofer",
+    "Mini Speakers",
+    "Wick Stove",
+    "Waffle Maker",
+    "Sandwich Maker",
+    "Grill Maker",
+    "Donut Maker",
+    "Electric Iron (Dry / Heavy)",
+    "Mug / Tea Glass Sets",
+    "Ladies / Gents / Unisex Watches",
+    "Trimmer (Charge / Plug)",
+    "Electric Kettle",
+    "Whistle Kettle",
+    "Wire / Cable",
+    "Mosquito Bat",
+    "Hot Plate",
+    "Massagers",
+    "Polystyrene Sealer",
+    "Flask / Vacuum Flask",
+    "Personal & Kitchen Scale",
+    "Vegetable Chopper",
+    "Egg Beater / Hand Mixer",
+    "Blender / Mixer"
+  ];
+
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
+        {/* === Section Header === */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">About Rich More</h2>
           <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
@@ -13,9 +49,8 @@ const AboutSection = () => {
           </p>
         </div>
 
-        {/* Owner & Intro */}
+        {/* === Owner & Intro === */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-          {/* Images Grid - 4 images (2x2) with hover */}
           <div className="grid grid-cols-2 gap-4">
             {[
               { src: "/RM.jpg", alt: "Rich More Shop - Pettah" },
@@ -32,12 +67,16 @@ const AboutSection = () => {
                   alt={img.alt}
                   className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
+                  onError={(e) => {
+                    if (img.src === "/RM.jpg") {
+                      e.target.src = "https://placehold.co/300x300/1e40af/white?text=Rich+More";
+                    }
+                  }}
                 />
               </div>
             ))}
           </div>
 
-          {/* Text Content */}
           <div className="space-y-5">
             <h3 className="text-2xl font-bold text-gray-900">Who We Are</h3>
             <p className="text-gray-700 leading-relaxed">
@@ -52,49 +91,41 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* What We Offer - with hover cards */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-12">What We Offer</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: <FaClock className="text-blue-600 text-2xl" />, title: 'Watches & Wall Clocks' },
-              { icon: <FaLightbulb className="text-blue-600 text-2xl" />, title: 'Electrical Items' },
-              { icon: <FaWarehouse className="text-blue-600 text-2xl" />, title: 'Kitchen & Home Appliances' },
-              { icon: <FaGlobeAsia className="text-blue-600 text-2xl" />, title: 'Direct Imports – Global Quality' },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-6 rounded-xl border border-gray-200 text-center
-                  transition-all duration-300
-                  hover:shadow-md hover:border-blue-300 hover:-translate-y-1
-                  cursor-pointer group"
-              >
-                <div className="flex justify-center mb-4 text-blue-600 group-hover:text-blue-700 transition-colors">
-                  {item.icon}
+        {/* === What We Offer (Light bg for visual break) === */}
+        <div className="mb-20 bg-gray-100 py-12 px-4 rounded-2xl">
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-12">What We Offer</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: <FaClock className="text-blue-600 text-2xl" />, title: 'Watches & Wall Clocks' },
+                { icon: <FaLightbulb className="text-blue-600 text-2xl" />, title: 'Electrical & Lighting' },
+                { icon: <FaWarehouse className="text-blue-600 text-2xl" />, title: 'Kitchen & Home Appliances' },
+                { icon: <FaGlobeAsia className="text-blue-600 text-2xl" />, title: 'Direct Imports – Global Quality' },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white p-6 rounded-xl border border-gray-200 text-center
+                    transition-all duration-300
+                    hover:shadow-md hover:border-blue-300 hover:-translate-y-1
+                    cursor-pointer group"
+                >
+                  <div className="flex justify-center mb-4 text-blue-600 group-hover:text-blue-700 transition-colors">
+                    {item.icon}
+                  </div>
+                  <h4 className="font-semibold text-gray-900 group-hover:text-blue-700 transition-colors">
+                    {item.title}
+                  </h4>
                 </div>
-                <h4 className="font-semibold text-gray-900 group-hover:text-blue-700 transition-colors">
-                  {item.title}
-                </h4>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Product List Details */}
+        {/* === Product List (White bg for focus) === */}
         <div className="bg-white rounded-2xl shadow-sm p-6 md:p-8 mb-20 border border-gray-200">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Our Product Range Includes:</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center md:text-left">Our Product Range Includes:</h3>
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-700">
-            {[
-              "Wall Clocks & Wrist Watches",
-              "LED Bulbs, Tubelights & Lighting Fixtures",
-              "Wiring Cables, Switches & Sockets",
-              "MCBs, DB Boards & Circuit Protection",
-              "Rice Cookers, Ovens, Blenders",
-              "Ceiling Fans, Exhaust Fans, Stand Fans",
-              "Electric Kettles, Irons, Heaters",
-              "Industrial Electrical Equipment",
-              "Imported Home & Kitchen Appliances"
-            ].map((item, idx) => (
+            {productItems.map((item, idx) => (
               <li key={idx} className="flex items-start">
                 <span className="text-blue-600 mr-2 mt-1">•</span>
                 <span className="hover:text-blue-700 transition-colors">{item}</span>
@@ -103,7 +134,7 @@ const AboutSection = () => {
           </ul>
         </div>
 
-        {/* Closing Promise */}
+        {/* === Closing Promise (Soft blue bg for emotional close) === */}
         <div className="text-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl py-10 px-6 border border-blue-100">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
             Unlimited Stock · Best Prices · Trusted Service
