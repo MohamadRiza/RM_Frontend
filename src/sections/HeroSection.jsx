@@ -50,7 +50,7 @@ const HeroSection = () => {
       }}
     >
       {/* Dark gradient overlay for better contrast */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-black/70"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col justify-center items-center h-full text-center">
         <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
