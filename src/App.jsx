@@ -6,12 +6,14 @@ import Footer from './components/Footer';
 import ProductsGallery from './pages/ProductsGallery';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop'; // ✅ Import it
+import TopBar from './components/TopBar';
 
 function App() {
   return (
     <Router>
       <ScrollToTop /> {/* ✅ Add here */}
       <div className="flex flex-col min-h-screen">
+        <TopBar />
         <Navbar />
         <main className="flex-grow">
           <Routes>
