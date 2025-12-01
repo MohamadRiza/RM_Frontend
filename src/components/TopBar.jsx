@@ -10,7 +10,7 @@ const TopBar = () => {
           {/* Left: Address */}
           <div className="flex items-center justify-center md:justify-start">
             <FaMapMarkerAlt className="mr-2 text-blue-400 flex-shrink-0" />
-            <span>No. 73, 2nd Cross Street, Pettah, Colombo, Sri Lanka</span>
+            <span>No. 86, 2nd Cross Street, Pettah, Colombo, Sri Lanka</span>
           </div>
 
           {/* Right: Contact Info (stacked on mobile, inline on desktop) */}
