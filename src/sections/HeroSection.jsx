@@ -8,7 +8,7 @@ const HeroSection = () => {
     "Wholesale & Retail Dealer",
     "Kitchen & Home Appliances",
     "Direct Imports from Global Brands",
-    "Trusted Since 1995"
+    "Trusted Since 2009"
   ];
 
   const [text, setText] = useState('');
@@ -58,7 +58,7 @@ const HeroSection = () => {
           <span className="ml-1 animate-pulse">|</span>
         </h1>
         <p className="text-lg text-white max-w-3xl mx-auto mb-10 drop-shadow-md opacity-90">
-          Colombo’s trusted wholesale & retail dealer for electrical goods — quality products, competitive prices, and reliable service since 1995.
+          Colombo’s trusted wholesale & retail dealer for electrical goods — quality products, competitive prices, and reliable service since 2009.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link

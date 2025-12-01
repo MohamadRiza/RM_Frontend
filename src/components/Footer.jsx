@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
             <p className="text-blue-500 font-medium mb-3">Wholesale & Retail Dealer</p>
             <p className="text-gray-400 leading-relaxed">
-              No. 73, 2nd Cross Street,<br />
+              No. 86, 2nd Cross Street,<br />
               Pettah, Colombo,<br />
               Sri Lanka
             </p>
@@ -43,16 +43,16 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.129a11.087 11.087 0 005.122 5.122l1.129-2.257a1 1 0 011.21-.502l4.493 1.498A1 1 0 0121 17.72V20a2 2 0 01-2 2h-2" />
                 </svg>
                 <div>
-                  <div><a href="tel:+941234567890" className="hover:text-white transition-colors duration-200">+94 123 456 7890</a></div>
-                  <div><a href="tel:+949876543210" className="hover:text-white transition-colors duration-200">+94 987 654 3210</a></div>
+                  <div><a href="tel:+94778023316" className="hover:text-white transition-colors duration-200">+94 077 802 3316</a></div>
+                  <div><a href="tel:+94778980028" className="hover:text-white transition-colors duration-200">+94 077 898 0028</a></div>
                 </div>
               </li>
               <li className="flex items-start">
                 <svg className="w-5 h-5 text-blue-500 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:example@example.com" className="hover:text-white transition-colors duration-200">
-                  example@example.com
+                <a href="mailto:zaidfareen11@gmail.com" className="hover:text-white transition-colors duration-200">
+                  zaidfareen11@gmail.com
                 </a>
               </li>
             </ul>
@@ -105,7 +105,7 @@ const Footer = () => {
         {/* === Bottom Credit === */}
         <div className="mt-8 pt-6 text-center text-gray-500 text-sm border-t border-gray-800">
           &copy; {new Date().getFullYear()} <span className="text-white">Rich More</span>. All Rights Reserved.<br />
-          Trusted Electrical & Home Appliance Supplier in Pettah, Colombo since 2010.
+          Trusted Electrical & Home Appliance Supplier in Pettah, Colombo since 2009.
           <div className="mt-2">
             Developed by{' '}
             <a

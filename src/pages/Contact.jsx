@@ -47,7 +47,7 @@ const Contact = () => {
                   <div className="ml-4">
                     <h3 className="font-semibold text-gray-800">Our Address</h3>
                     <p className="text-gray-600 mt-1">
-                      No. 73, 2nd Cross Street,<br />
+                      No. 86, 2nd Cross Street,<br />
                       Pettah, Colombo,<br />
                       Sri Lanka
                     </p>
@@ -62,8 +62,8 @@ const Contact = () => {
                   <div className="ml-4">
                     <h3 className="font-semibold text-gray-800">Phone</h3>
                     <p className="text-gray-600 mt-1">
-                      <a href="tel:+941234567890" className="hover:text-blue-600 transition">+94 123 456 7890</a><br />
-                      <a href="tel:+949876543210" className="hover:text-blue-600 transition">+94 987 654 3210</a>
+                      <a href="tel:+94778023316" className="hover:text-blue-600 transition">+94 077 802 3316</a><br />
+                      <a href="tel:+94778980028" className="hover:text-blue-600 transition">+94 077 898 0028</a>
                     </p>
                   </div>
                 </div>
@@ -76,8 +76,8 @@ const Contact = () => {
                   <div className="ml-4">
                     <h3 className="font-semibold text-gray-800">Email</h3>
                     <p className="text-gray-600 mt-1">
-                      <a href="mailto:example@example.com" className="hover:text-blue-600 transition">
-                        example@example.com
+                      <a href="mailto:zaidfareen11@gmail.com" className="hover:text-blue-600 transition">
+                        zaidfareen11@gmail.com
                       </a>
                     </p>
                   </div>
@@ -88,8 +88,8 @@ const Contact = () => {
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <h3 className="font-semibold text-gray-800">Business Hours</h3>
                 <ul className="text-gray-600 mt-2 space-y-1">
-                  <li>Monday – Saturday: 8:00 AM – 7:00 PM</li>
-                  <li>Sunday: 9:00 AM – 4:00 PM</li>
+                  <li>Monday – Saturday: 9:00 AM – 7:00 PM</li>
+                  <li>Sunday: 9:30 AM – 5:00 PM</li>
                 </ul>
               </div>
             </div>

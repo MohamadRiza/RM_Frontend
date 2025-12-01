@@ -4,6 +4,7 @@ import AboutSection from "../sections/AboutSection";
 import HeroSection from "../sections/HeroSection";
 import PartnerBrandsSection from "../sections/PartnerBrandsSection";
 import ProductsPreviewSection from "../sections/ProductsPreviewSection";
+import WhyChooseUsSection from "../sections/WhyChooseUsSection";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <section id="about" className="...">
         <AboutSection />
       </section>
+      <WhyChooseUsSection/>
       <PartnerBrandsSection />
       <ProductsPreviewSection />
     </div>

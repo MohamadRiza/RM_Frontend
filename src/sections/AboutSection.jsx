@@ -45,7 +45,7 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">About Rich More</h2>
           <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-            Your Trusted Partner in Electrical & Home Solutions Since 2010
+            Your Trusted Partner in Electrical & Home Solutions Since 2009
           </p>
         </div>
 
@@ -141,7 +141,7 @@ const AboutSection = () => {
           </h3>
           <p className="text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed">
             Whether you're a contractor, retailer, or individual customer — we serve everyone with the same dedication.  
-            With <strong>direct imports</strong> and <strong>10,000+ items in stock</strong>, Rich More ensures you get 
+            With <strong>direct imports</strong> and <strong>1000+ items in stock</strong>, Rich More ensures you get 
             <strong className="text-blue-700"> quality, variety, and value</strong> in every purchase.
           </p>
         </div>

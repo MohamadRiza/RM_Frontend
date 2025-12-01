@@ -17,15 +17,15 @@ const TopBar = () => {
           <div className="flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-1">
             <div className="flex items-center">
               <FaPhone className="mr-2 text-blue-400 flex-shrink-0" />
-              <a href="tel:+941234567890" className="hover:text-white transition">+94 123 456 7890</a>
+              <a href="tel:+94778023316" className="hover:text-white transition">+94 077 802 3316</a>
             </div>
             <div className="flex items-center">
               <FaPhone className="mr-2 text-blue-400 flex-shrink-0" />
-              <a href="tel:+949876543210" className="hover:text-white transition">+94 987 654 3210</a>
+              <a href="tel:+94778980028" className="hover:text-white transition">+94 077 898 0028</a>
             </div>
             <div className="flex items-center">
               <FaEnvelope className="mr-2 text-blue-400 flex-shrink-0" />
-              <a href="mailto:example@example.com" className="hover:text-white transition">example@example.com</a>
+              <a href="mailto:zaidfareen11@gmail.com" className="hover:text-white transition">zaidfareen11@gmail.com</a>
             </div>
           </div>
         </div>
