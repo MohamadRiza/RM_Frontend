@@ -11,63 +11,71 @@ const brandLogos = [
   },
   {
     name: "Galaxy",
-    src: "https://lh5.googleusercontent.com/proxy/X_gJ7X5kHAv1UOxXkJVPJh9jw9i_yU24ce_pn1X99Q5_wtxNtHPvYpnlg-9_aDsreP-Er48CKcXjPUpwti0Kn73ZzTNAXD6NFUfTIeM",
+    src: "./Galaxy.jpg",
   },
   {
     name: "Camrin",
-    src: "https://upload.wikimedia.org/wikipedia/commons/7/77/LG_Electronics_logo_2020.svg",
+    src: "./Camrin.jpg",
   },
   {
     name: "Earth Star",
-    src: "https://upload.wikimedia.org/wikipedia/en/0/0a/Havells_Logo.svg",
+    src: "./EarthStar.jpg",
   },
   {
     name: "Eagle",
-    src: "https://upload.wikimedia.org/wikipedia/en/4/49/Anchor_by_Roma_logo.png",
+    src: "./Eagle.jpg",
   },
   {
     name: "MAC",
-    src: "https://upload.wikimedia.org/wikipedia/en/7/73/Syska_logo.png",
+    src: "./Mac.jpg",
   },
   {
     name: "SOKANY",
-    src: "https://upload.wikimedia.org/wikipedia/en/4/4f/Crompton_logo.png",
+    src: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=442,h=198,fit=crop/ALpb2WBJlWF5o522/image_20240228130703-copy-Yg25QQyyllsq6EnM.png",
   },
   {
-    name: "VGR",
-    src: "https://upload.wikimedia.org/wikipedia/en/4/4f/Crompton_logo.png",
+    name: "Blackford",
+    src: "./Blackford.jpg",
   },
   {
-    name: "CITIFREE",
-    src: "https://upload.wikimedia.org/wikipedia/en/4/4f/Crompton_logo.png",
+    name: "Citizen",
+    src: "./Citizen.jpg",
   },
   {
-    name: "Winner",
-    src: "https://upload.wikimedia.org/wikipedia/en/4/4f/Crompton_logo.png",
+    name: "Crescent",
+    src: "./Crescent.jpg",
   },
   {
-    name: "Matiz",
-    src: "https://upload.wikimedia.org/wikipedia/en/4/4f/Crompton_logo.png",
-  },
-  {
-    name: "GEEMY",
-    src: "https://upload.wikimedia.org/wikipedia/en/4/4f/Crompton_logo.png",
-  },
-  {
-    name: "WAHL",
-    src: "https://upload.wikimedia.org/wikipedia/en/4/4f/Crompton_logo.png",
-  },
-  {
-    name: "PRINGLE",
-    src: "https://upload.wikimedia.org/wikipedia/en/4/4f/Crompton_logo.png",
+    name: "Geemy",
+    src: "./Geemy.jpg",
   },
   {
     name: "HEJ",
-    src: "https://upload.wikimedia.org/wikipedia/en/4/4f/Crompton_logo.png",
+    src: "./Hej.jpg",
   },
   {
-    name: "CRESCENT",
-    src: "https://upload.wikimedia.org/wikipedia/en/4/4f/Crompton_logo.png",
+    name: "iDeal",
+    src: "./Ideal.jpg",
+  },
+  {
+    name: "Kawashi",
+    src: "./Kawashi.jpg",
+  },
+  {
+    name: "MAC",
+    src: "./Mac.jpg",
+  },
+  {
+    name: "Matiz",
+    src: "./Matiz.jpg",
+  },
+  {
+    name: "Pringle",
+    src: "./Pringle.jpg",
+  },
+  {
+    name: "Winner",
+    src: "./Winner.jpg",
   },
 ];
 
