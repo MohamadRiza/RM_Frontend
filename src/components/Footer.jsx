@@ -106,6 +106,11 @@ const Footer = () => {
                   Careers
                 </Link>
               </li>
+              <li>
+                <Link to="/admin/login" className="hover:text-white transition-colors duration-200">
+                  Admin
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
